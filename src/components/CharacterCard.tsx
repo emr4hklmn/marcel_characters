@@ -36,7 +36,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({ character }) => {
         />
         <div className='available'>{available ? available : 'Not Acted'}</div>
       </div>
-      <h2>{name.slice(0, 20)}</h2>
+      <h3>{name}</h3>
       <button onClick={() => navigate(`/detail/${id}`)} className='detail-btn'>
         Detail
       </button>
