@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
-}
+.parent {
+/* display: flex !important;
+justify-content: left !important;
+align-items: center;
+gap:5px !important;
+flex-wrap: wrap; */
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+padding-left: auto;
+gap: 5px !important;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
   }
-}
+  .loading-panel{
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+  .loading-panel-center{
+    height: 100vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw !important;
+  }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  .detail-btn{
+    all: unset;
+    border:2px solid transparent;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    background-color:red !important ;
+    width: 100% !important;
+    height: 30px !important;
+    color: white;
+    text-align: center;
+
+}
+.detail-btn:hover{
+  border: 2px solid red;
+  color: red;
+  background-color: white !important;
+  cursor: pointer !important;
+
+}
+.card-body{
+  padding: 5px;
+  border:2px dotted red;
+
+  /* width:20%; */
+
+
+}
+.div-center{
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.character-image-container{
+  overflow: hidden !important;
+  width: 100% !important;
+  height: 300px !important;
+  position: relative;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.available{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 20px;
+  min-width: 20px;
+  background-color: green;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 1px dashed red ;
+}
+.character-image{
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.character-image:hover{
+  transform-origin: center !important;
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+}
+.marvel-header{
+ width: 100%;
+ height: 250px;
+ margin-bottom: 5px !important;
+}
+@media screen and (max-width: 992px) {
+  .parent {
+    /* display: flex !important;
+    justify-content: left !important;
+    align-items: center;
+    gap:5px !important;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: auto;
+    gap: 5px !important;
+    
+    
+      }
 }
