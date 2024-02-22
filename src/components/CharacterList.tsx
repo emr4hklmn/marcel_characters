@@ -24,6 +24,7 @@ const CharacterList: React.FC = () => {
   const [offset, setOffset] = useState(0);
   const [loading, setLoading] = useState(false);
 
+
   const fetchCharacters = async () => {
     try {
       setLoading(true);
@@ -39,11 +40,11 @@ const CharacterList: React.FC = () => {
       const newCharacters = await response?.data?.data?.results?.filter(
         (value: any) => !value.thumbnail.path.includes('image_not_available')
       );
-      console.log('mew', newCharacters);
+    
       setCharacters((prevCharacters) => [...prevCharacters, ...newCharacters]);
       setOffset((prevOffset) => prevOffset + 20);
-    } catch (error) {
-      console.error('Error fetching characters:', error);
+    } catch (error:any) {
+      throw new Error(error.message)
     } finally {
       setLoading(false);
     }

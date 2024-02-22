@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState, lazy, useReducer } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
 import { useParams } from 'react-router-dom';
@@ -27,7 +27,6 @@ const CharacterDetail: React.FC = () => {
           hash: md5(ts + privateKey + publicKey),
         },
       });
-      console.log('respoonse', response?.data?.data?.results?.[0]);
       setCharacter(response?.data?.data?.results?.[0]);
       setComics(response?.data?.data?.results?.[0]?.comics);
       getComicDetails(characterId);
@@ -46,7 +45,6 @@ const CharacterDetail: React.FC = () => {
           },
         }
       );
-      console.log('heyy', responses.data.data.results);
       let deger = responses.data.data.results.sort((a: any, b: any) =>
         b?.dates?.[0]?.date - a?.dates[0]?.date ? -1 : 1
       );

@@ -1,9 +1,5 @@
 .parent {
-/* display: flex !important;
-justify-content: left !important;
-align-items: center;
-gap:5px !important;
-flex-wrap: wrap; */
+
 display: grid;
 grid-template-columns: repeat(5, 1fr);
 padding-left: auto;
@@ -52,7 +48,6 @@ gap: 5px !important;
   padding: 5px;
   border:2px dotted red;
 
-  /* width:20%; */
 
 
 }
@@ -105,11 +100,6 @@ gap: 5px !important;
 }
 @media screen and (max-width: 992px) {
   .parent {
-    /* display: flex !important;
-    justify-content: left !important;
-    align-items: center;
-    gap:5px !important;
-    flex-wrap: wrap; */
     display: grid;
     grid-template-columns: 1fr;
     padding-left: auto;
